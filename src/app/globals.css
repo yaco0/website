@@ -1,0 +1,471 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #eaeaea;
+}
+
+header h1 {
+  color: #333;
+}
+
+main {
+  flex: 1;
+  padding: 2rem 0;
+}
+
+footer {
+  padding: 1.5rem 0;
+  border-top: 1px solid #eaeaea;
+  text-align: center;
+  color: #666;
+}
+
+/* 홈페이지 스타일 */
+.home-container {
+  text-align: center;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.feature-card {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card h3 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.feature-card p {
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+
+.feature-card a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #4a90e2;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* 로그인 페이지 스타일 */
+.login-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 0.75rem;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.login-container button:disabled {
+  background: #a3c2e8;
+  cursor: not-allowed;
+}
+
+.login-container .error {
+  color: #e53e3e;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.login-container p {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.text-button {
+  background: none;
+  border: none;
+  color: #4a90e2;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 0.5rem;
+}
+
+.back-link {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.back-link a {
+  color: #666;
+  text-decoration: none;
+}
+
+.back-link a:hover {
+  text-decoration: underline;
+}
+
+/* 일정 관리 페이지 스타일 */
+.schedule-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.add-button {
+  padding: 0.5rem 1rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.preview-link {
+  padding: 0.5rem 1rem;
+  background-color: #6c757d;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.schedule-form {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-form h3 {
+  margin-bottom: 1rem;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.cancel-button {
+  background-color: #6c757d;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox input {
+  width: auto;
+}
+
+.checkbox label {
+  margin-bottom: 0;
+}
+
+.schedules-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.schedule-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.schedule-item.completed {
+  background: #e8f4f8;
+  border-left: 4px solid #4a90e2;
+}
+
+.schedule-content {
+  flex: 1;
+}
+
+.schedule-content h3 {
+  margin-bottom: 0.3rem;
+}
+
+.date {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.description {
+  color: #333;
+}
+
+.schedule-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.edit-button, .delete-button {
+  padding: 0.3rem 0.7rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.edit-button {
+  background-color: #6c757d;
+  color: white;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.no-schedules {
+  text-align: center;
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.add-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #4a90e2;
+  text-decoration: none;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+}
+
+.error {
+  color: #dc3545;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* 미리보기 페이지 스타일 */
+.preview-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline {
+  position: relative;
+  margin: 2rem 0;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #e2e8f0;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-date {
+  position: absolute;
+  left: -2.5rem;
+  background: #4a90e2;
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.timeline-content {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  margin-left: 1rem;
+}
+
+.timeline-event {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.timeline-event:last-child {
+  border-bottom: none;
+}
+
+.timeline-event.completed h3 {
+  color: #4a90e2;
+}
+
+.timeline-event h3 {
+  margin-bottom: 0.3rem;
+}
+
+.print-section {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.print-button {
+  padding: 0.5rem 1.5rem;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* 인쇄용 스타일 */
+@media print {
+  header, footer, .actions, .back-link, .print-section {
+    display: none;
+  }
+  
+  body {
+    background: white;
+  }
+  
+  .preview-container {
+    max-width: 100%;
+  }
+  
+  .timeline::before {
+    display: none;
+  }
+  
+  .timeline-date {
+    position: relative;
+    left: 0;
+    transform: none;
+    margin-bottom: 0.5rem;
+  }
+  
+  .timeline-content {
+    box-shadow: none;
+    margin-left: 0;
+    page-break-inside: avoid;
+  }
+}
+
+.kakao-login-btn {
+  background-color: #FEE500;
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+  margin: 20px 0;
+}
+
+.kakao-login-btn:hover {
+  background-color: #F2DA00;
+}
